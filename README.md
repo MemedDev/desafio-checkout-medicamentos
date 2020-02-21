@@ -1,69 +1,46 @@
-![cabecalho memed desafio](https://user-images.githubusercontent.com/2197005/28128758-3b0a0626-6707-11e7-9583-dac319c8b45b.png)
+# Custom Express Server example
 
-# Desafio Checkout de Medicamentos
+## How to use
 
-## Problema:
+### Using `create-next-app`
 
-Uma das maiores preocupações da Memed, ao se focar em tornar a área de saúde mais eficiente, é a adesão do paciente ao tratamento. Em grande parte dos casos, após o paciente sair de uma consulta, ele procurará uma farmácia para a compra dos medicamentos prescritos. 
+Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
 
-O sucesso da compra dos medicamentos está ligado a dois principais fatores:
-- Preço dos medicamentos
-- Distância até a farmácia
-
-## Solução:
-
-Criar um site mobile, onde o paciente possa encontrar a farmácia mais próxima e com o menor custo dos medicamentos a serem comprados.
-
-## Proposta:
-
-A solução pode ser feita com ou sem frameworks front-end e back-end, mas deve utilizar os seguintes Design Patterns:
-* Repository
-* Service Locator
-* Command
-* MVC
-* Singleton
-
-Não é necessário utilizar o mesmo pattern em ambas as partes da aplicação (front-end e back-end).
-
-O back-end deve ser uma API REST, de preferência, uma [JSON API](http://jsonapi.org/). Não é necessária autenticação para acessar o sistema, queremos que você se concentre na localização da melhor farmácia.
-
-Não é necessário capturar a localização real do paciente (dispositivo), utilize a localização da Memed:
-
-```json
-{
-	lat: -23.5648304,
-	lon: -46.6436604
-}
+```bash
+npx create-next-app --example custom-server-express custom-server-express-app
+# or
+yarn create next-app --example custom-server-express custom-server-express-app
 ```
 
-Montamos uma API REST (usando AWS Lambda + JS \o/) com uma pequena lista de farmácias, suas localizações e preços:
+### Download manually
 
-| Método | URL			 | Descrição |
-| ------ | ------------- | --------- |
-| GET    | https://wydfdauvw5.execute-api.sa-east-1.amazonaws.com/desafio/farmacias | Lista de farmácias |
-| GET    | https://wydfdauvw5.execute-api.sa-east-1.amazonaws.com/desafio/farmacias/{id-da-farmacia} | Informações adicionais da farmácia (lista de medicamentos) |
+Download the example:
 
-Considere que os medicamentos a serem comprados são:
-- Ácido zoledrônico 4mg
-- Água para injeção 1mL
-- Bromazepam 3mg
+```bash
+curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/custom-server-express
+cd custom-server-express
+```
 
-Fique a vontade para usar algum framework CSS (ex: Bootstrap, Material, Semantic UI).
+Install it and run:
 
-Para enviar seu código, faça um fork deste repositório e nos avise quando concluir o desafio (:white_check_mark: as mensagens dos seus commits também serão analisadas). 
+```bash
+npm install
+npm run dev
+# or
+yarn
+yarn dev
+```
 
-Lembre-se de alterar o README.md com as instruções para rodar o projeto.
+Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
 
-## Etapas:
+```bash
+now
+```
 
-1 - O usuário deverá encontrar a lista de medicamentos que deseja comprar ao acessar o site:
+## The idea behind the example
 
-![lista](https://user-images.githubusercontent.com/2197005/28282427-cdb0906a-6b00-11e7-9615-19936b24d0fd.png)
+Most of the times the default Next server will be enough but sometimes you want to run your own server to customize routes or other kind of the app behavior. Next provides a [Custom server and routing](https://github.com/zeit/next.js#custom-server-and-routing) so you can customize as much as you want.
 
-2 - Ao clicar no botão "Encontrar Farmácia", deverá ser encontrada a farmácia mais próxima e com o menor valor total:
+Because the Next.js server is just a node.js module you can combine it with any other part of the node.js ecosystem. in this case we are using express to build a custom router on top of Next.
 
-![checkout](https://user-images.githubusercontent.com/2197005/28282428-cdae34fa-6b00-11e7-9814-7707e7b326bd.png)
-
-Boa sorte _and let’s code_!
-
-:m: Equipe Memed
+The example shows a server that serves the component living in `pages/a.js` when the route `/b` is requested and `pages/b.js` when the route `/a` is accessed. This is obviously a non-standard routing strategy. You can see how this custom routing is being made inside `server.js`.
