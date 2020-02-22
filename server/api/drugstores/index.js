@@ -1,9 +1,10 @@
 import { Router } from "express";
-import drugstores from "../../../mock/drugstores";
+import drugstore from "../../../mock/drugstore";
 const router = Router();
 
 router.get("/", (req, res) => {
-  return res.json(drugstores);
+  console.info(req.params);
+  return res.json(drugstore);
 });
 
 export default router;

@@ -1,15 +1,15 @@
 import request from "supertest";
 import express from "express";
-import router from "./";
+import router from ".";
 
-import drugstores from "../../../mock/drugstores";
+import drugstore from "../../../mock/drugstore";
 
 var app = express();
 app.use(router);
 
-describe("Route drugstores", () => {
-  it("should return all drugstores", async () => {
+describe("Route drugstore", () => {
+  it("should return the closest drugstore", async () => {
     const response = await request(app).get("/");
-    expect(response.body).toStrictEqual(drugstores);
+    expect(response.body).toStrictEqual(drugstore);
   });
 });

@@ -1,0 +1,20 @@
+.header {
+  background: #fafafa;
+  border-bottom: 1px solid $divider;
+  cursor: pointer;
+  display: flex;
+
+  .content {
+    padding: #{$padding/2} 0;
+  }
+
+  .icon {
+    line-height: 2rem;
+    padding: #{$padding/2} $margin;
+    text-align: center;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.025);
+    }
+  }
+}

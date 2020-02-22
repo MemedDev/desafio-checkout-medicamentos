@@ -7,7 +7,7 @@ const props = {
   stamp: "yellow",
   name: "Medicament name",
   quantity: 4,
-  value: "R$ 12.34"
+  value: 12.34
 };
 describe("<Medicament />", () => {
   it("renders a <Medicament>", () => {
@@ -16,7 +16,13 @@ describe("<Medicament />", () => {
       `${props.quantity} unidades`
     );
     expect(renderedComponent.find(".name").text()).toBe(props.name);
-    expect(renderedComponent.find(".value").text()).toBe(props.value);
+    expect(
+      renderedComponent
+        .find(".value")
+        .text()
+        .toString()
+        .replace(/\s+/, " ")
+    ).toBe(`R$ ${props.value}`);
   });
   it("renders a <Medicament> with only one unit", () => {
     const renderedComponent = mount(<Medicament {...props} quantity={1} />);

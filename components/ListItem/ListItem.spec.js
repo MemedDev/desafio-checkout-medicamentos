@@ -1,7 +1,6 @@
 import React from "react";
 import { mount, shallow } from "enzyme";
 import ListItem from "./";
-import STAMPS from "../../constant/STAMPS";
 
 const icon = <div> image </div>;
 describe("<ListItem />", () => {
