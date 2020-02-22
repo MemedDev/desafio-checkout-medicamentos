@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { find } from "../../actions/drugstores";
 import Medicament from "../../components/Medicament";
 import Info from "../../components/Info";
-import ListItem from "../../components/listItem";
+import ListItem from "../../components/ListItem";
 import Header from "../../components/Header";
 
 const sumAll = (_sum, { value, quantity }) => _sum + value * quantity;
