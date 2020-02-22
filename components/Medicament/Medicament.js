@@ -14,7 +14,7 @@ const Medicament = ({ stamp, name, quantity, value }) => {
       <div className={style.quantity}>
         {quantity} unidade{_s}
       </div>
-      <div className={style.name}>{name}</div>
+      <strong className={style.name}>{name}</strong>
       {value && <div className={style.value}>{value}</div>}
     </ListItem>
   );

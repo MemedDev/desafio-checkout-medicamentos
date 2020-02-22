@@ -1,0 +1,17 @@
+$bg: #00b8d4;
+
+.find {
+  background: $bg;
+  color: #7cdbe9;
+  cursor: pointer;
+  padding: 2rem;
+  text-align: center;
+
+  b {
+    color: #fff;
+  }
+
+  &:hover {
+    background: darken($color: $bg, $amount: 2.5);
+  }
+}

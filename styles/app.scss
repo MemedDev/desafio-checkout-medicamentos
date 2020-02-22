@@ -7,15 +7,47 @@
   }
 
   html,
-  body {
+  body,
+  #__next {
     background-color: $body-bg;
-    color: $text-color;
+    color: $strong-color;
     font-family: $font-family;
     font-size: $font-size-base;
+    font-weight: 300;
     height: 100%;
     margin: 0;
     min-height: 100%;
     overflow-x: hidden;
     padding: 0;
+
+    &:not(h1, h2, h3, h4, h5, h6, b, strong) {
+      color: $text-color;
+    }
+  }
+
+  #__next {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .next-content {
+      flex: 1;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b,
+  strong {
+    color: $strong-color;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 1.5rem;
   }
 }

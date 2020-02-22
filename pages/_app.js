@@ -9,7 +9,7 @@ class MyApp extends App {
 
     return (
       <Provider store={reduxStore}>
-        <Component {...pageProps} />
+        <Component {...pageProps} className="next-content" />
       </Provider>
     );
   }
