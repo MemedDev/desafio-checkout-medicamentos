@@ -1,0 +1,21 @@
+:global {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    outline: 0;
+  }
+
+  html,
+  body {
+    background-color: $body-bg;
+    color: $text-color;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+    padding: 0;
+  }
+}

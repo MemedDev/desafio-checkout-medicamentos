@@ -1,0 +1,16 @@
+.list-item {
+  border-bottom: 1px solid $divider;
+  cursor: pointer;
+  display: flex;
+  padding: $padding $margin;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.025);
+  }
+
+  .icon {
+    margin-right: $padding;
+    text-align: center;
+    width: 32px;
+  }
+}

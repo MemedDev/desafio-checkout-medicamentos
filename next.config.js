@@ -6,6 +6,9 @@ const config = {
   cssLoaderOptions: {
     importLoaders: 1,
     localIdentName: "[local]___[hash:base64:5]"
+  },
+  sassLoaderOptions: {
+    prependData: '@import "styles/variables.scss";'
   }
 };
 
