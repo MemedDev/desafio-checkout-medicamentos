@@ -1,0 +1,33 @@
+
+          #pwd + .glyphicon {
+              cursor: pointer;
+              pointer-events: all;
+          }
+
+          .erro_msg{
+            background-color: crimson;
+            color: whitesmoke;
+          }
+
+          
+          .ok_msg{
+            background-color: limegreen;
+            color: whitesmoke;
+          }
+
+          /* Styles for CodePen Demo Only */
+          #wrapper {
+              max-width: 500px;
+              margin: auto;
+              padding-top: 25vh;
+          }
+
+       
+          #eth1_present_form,#ip_validador {
+            display: none;
+          }
+
+
+  .bn {
+            display: none;
+          }

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+        <title>Memed - Pharmacy Checkout</title>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/config.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row row-centered pos">
+                <div class="col-lg-8 col-xs-12 col-centered">
+                    <!-- initialy headerDiv is empty and wil have its content filled by function-->
+                    <div class="well" style="height: 30px; border-bottom-width:2px; border-bottom-color:grey;" id="headerDiv"></div>
+                </div>
+                <div class="col-lg-8 col-xs-12 col-centered" style="border-bottom-width:2px; border-bottom-color:grey; padding-top: 70px;">
+                    <div class="well">
+                        <div class="row">
+                            <div class="col-lg-2 col-xs-3">
+                                &nbsp;
+                            </div>
+                            <div class="col-lg-6 col-xs-9">
+                                <!-- initialy content is empty and wil have its content filled by function-->
+                                <div id="content"></div>
+                            </div>
+                            <div class="col-lg-3 col-xs-3">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-xs-12 col-centered">
+                    <div class="well" style="word-wrap: break-word; display: table-cell;">
+                        <span class="text-muted">A Prescri&ccedil;&atilde;o digital Memed&copy; n&atilde;o dispensa a apresenta&ccedil;&atilde;o de sua vers&atilde;o impressa &agrave; farm&aacute;cia. O m&eacute;dico respons&aacute;vel por esta prescri&ccedil;&atilde;o n&atilde;o possui qualquer tipo de v&iacute;nculo com os pre&ccedil;os e/ou a farm&aacute;cias apresentadas.</span>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-xs-12 col-centered">
+                    <!-- button to initiate seach function-->
+                    <button type="button" class="btn btn-primary btn-block bg-primary" onclick="javascript:buttonGetFarma(1)" id="btnGetPharm">
+                        <span>Encontrar farm&aacute;cia</span><br><span style="color: aliceblue; font-size: small;">Servi&ccedil;o oferececido pela Memed&copy;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
